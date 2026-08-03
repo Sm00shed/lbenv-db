@@ -1,0 +1,7 @@
+ladybird = "94a55b0e9045b1e96307c5e4f0242309c589ecd4"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = ""
+date     = "2025-07-18"
+time     = ""
+title    = "initial"
+flake    = ""
