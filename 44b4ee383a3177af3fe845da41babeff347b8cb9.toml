@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-03"
 time     = "15:52"
 title    = "LibWeb+LibWebView: Stop publishing session history snapshots"
-# flake filled in commit 2
+flake    = "40d069dca4be05c9bef39815551454cc040aaacb"
 lbenv    = "6fb9b4a73fa10de3e195b015315c8c84f81ab726"
