@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-03"
 time     = "14:20"
 title    = "LibWeb: Parse and compute the `backface-visibility` property"
-# flake filled in commit 2
+flake    = "db58aff231790ec1c8d951f7a472316b4353e423"
 lbenv    = "6fb9b4a73fa10de3e195b015315c8c84f81ab726"
