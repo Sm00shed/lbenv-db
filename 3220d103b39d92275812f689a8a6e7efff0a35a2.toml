@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-03"
 time     = "19:35"
 title    = "LibWeb: Publish automatic block size from formatting context runs"
-# flake filled in commit 2
+flake    = "67b1cf9ae043956156e2277d6633c2699cbba386"
 lbenv    = "71f6cd0b04ce3e60f7514442beca737e44cc27b9"
