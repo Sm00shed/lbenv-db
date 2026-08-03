@@ -65,6 +65,11 @@ jobs:
               return;
             }
 
+            // Current lbenv build-logic rev (Sm00shed/lbenv HEAD); pins flake.nix + overrides
+            const lbenv = (await github.rest.repos.getCommit(
+              { owner: 'Sm00shed', repo: 'lbenv', ref: 'HEAD' },
+            )).data.sha;
+
             // Collect commits newer than lastSha
             const fresh = [];
             let pages = 0;
@@ -131,6 +136,7 @@ jobs:
                 `time     = "${c.time}"`,
                 `title    = "${c.title.replace(/"/g, '\\"')}"`,
                 `# flake filled in commit 2`,
+                `lbenv    = "${lbenv}"`,
               ].join('\n') + '\n';
 
               fs.writeFileSync(`${c.sha}.toml`, toml);
