@@ -1,6 +1,6 @@
 ladybird = "2c68ac64a892f6773db864e6a0613217f5113f4b"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-28"
 time     = "15:51"
 title    = "LibGfx: Add Rust wrappers for font and text layout"

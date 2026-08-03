@@ -1,6 +1,6 @@
 ladybird = "b979c068ca48dd7a9b12f0ac8f6536c9d9c1604d"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-23"
 time     = "12:56"
 title    = "LibWeb: Use correct IACVT fallback value for custom function evaluation"

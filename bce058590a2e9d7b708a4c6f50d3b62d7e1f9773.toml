@@ -1,6 +1,6 @@
 ladybird = "bce058590a2e9d7b708a4c6f50d3b62d7e1f9773"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-18"
 time     = "19:58"
 title    = "LibWeb: Skip inset reconstruction when no inset value is calculated"

@@ -1,6 +1,6 @@
 ladybird = "1b4e3379ed88dc3320a4b24eaa7a70c89d114e27"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-26"
 time     = "20:56"
 title    = "LibWeb: Recompute synthetic pseudo-element style after animation update"

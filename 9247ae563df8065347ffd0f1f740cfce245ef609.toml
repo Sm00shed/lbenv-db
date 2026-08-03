@@ -1,6 +1,6 @@
 ladybird = "9247ae563df8065347ffd0f1f740cfce245ef609"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-18"
 time     = "22:14"
 title    = "LibWeb: Move to line edges at vertical boundaries"

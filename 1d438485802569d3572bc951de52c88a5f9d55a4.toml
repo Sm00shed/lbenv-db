@@ -1,6 +1,6 @@
 ladybird = "1d438485802569d3572bc951de52c88a5f9d55a4"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-25"
 time     = "13:39"
 title    = "LibJS: Add the Flap low-level IR and machine backend"

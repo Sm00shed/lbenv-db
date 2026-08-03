@@ -1,6 +1,6 @@
 ladybird = "02f36ab4ac8a6658b614d2787e3c190c8973c896"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-23"
 time     = "12:04"
 title    = "LibWeb: Seed nested display list offsets as tree root transforms"

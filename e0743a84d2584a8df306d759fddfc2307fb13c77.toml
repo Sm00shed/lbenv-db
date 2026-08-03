@@ -1,6 +1,6 @@
 ladybird = "e0743a84d2584a8df306d759fddfc2307fb13c77"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-20"
 time     = "23:07"
 title    = "LibWeb: Avoid `PropertyNameAndID::from_name` when computing custom prop"

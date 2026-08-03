@@ -1,6 +1,6 @@
 ladybird = "1df71518b886392cfe256477d27f929ecba86450"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-29"
 time     = "05:34"
 title    = "Meta: Isolate IDL dictionary declaration order from python determinism"

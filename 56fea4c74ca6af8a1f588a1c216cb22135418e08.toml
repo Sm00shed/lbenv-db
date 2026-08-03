@@ -1,6 +1,6 @@
 ladybird = "56fea4c74ca6af8a1f588a1c216cb22135418e08"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "a6f34dff"
+vcpkg    = "a6f34dffaa5e4a6dddb4cb1a98360cb54166cdb5b4ee571157ea0366d653d040"
 date     = "2026-07-16"
 time     = "09:03"
 title    = "LibWeb: Restrict computed values to styled layout nodes"

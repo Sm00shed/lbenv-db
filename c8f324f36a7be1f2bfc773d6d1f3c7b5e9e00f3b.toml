@@ -1,6 +1,6 @@
 ladybird = "c8f324f36a7be1f2bfc773d6d1f3c7b5e9e00f3b"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-30"
 time     = "08:42"
 title    = "LibJS: Keep modulo operations narrow"

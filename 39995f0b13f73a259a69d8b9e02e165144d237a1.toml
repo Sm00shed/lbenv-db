@@ -1,6 +1,6 @@
 ladybird = "39995f0b13f73a259a69d8b9e02e165144d237a1"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-28"
 time     = "00:02"
 title    = "LibMedia: Make auto-suspension visible through a Suspended status"

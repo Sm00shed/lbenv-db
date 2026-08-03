@@ -1,6 +1,6 @@
 ladybird = "c2f7799a548df8ee830ad6e0f10488216c4add5d"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
 date     = "2026-08-02"
 time     = "00:09"
 title    = "LibWeb: Respect <path> `d` presentational attribute"

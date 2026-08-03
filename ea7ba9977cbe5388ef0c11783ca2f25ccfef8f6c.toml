@@ -1,6 +1,6 @@
 ladybird = "ea7ba9977cbe5388ef0c11783ca2f25ccfef8f6c"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-23"
 time     = "18:41"
 title    = "LibWeb: Extract shared FFI plumbing from the Rust selector engine"

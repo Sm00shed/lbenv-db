@@ -1,6 +1,6 @@
 ladybird = "e60b5cd04502e5f3e974bfe59a7893b9bef98865"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-19"
 time     = "20:36"
 title    = "LibRequests: Tolerate a lost connection when stopping a request"

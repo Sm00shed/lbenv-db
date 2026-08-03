@@ -1,6 +1,6 @@
 ladybird = "70b0ef1d469d9ff9544b7740060acf39bd4f7c66"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-22"
 time     = "01:37"
 title    = "LibWeb: Read root selector state from the live DOM wrapper"

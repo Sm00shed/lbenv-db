@@ -1,6 +1,6 @@
 ladybird = "6559cc7200f32d169837c783c83f601bb4632df6"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "582925e4"
+vcpkg    = "582925e426af8443d0555e862707299912b728ec33120e1a8c553ca89651c5f1"
 date     = "2026-07-24"
 time     = "21:29"
 title    = "Meta: Update OpenSSL to 3.6.3 and curl to 8.21.0"

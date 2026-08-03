@@ -1,6 +1,6 @@
 ladybird = "38b1e5192cbc87f2972d1c4d40727d898b91f05f"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-21"
 time     = "00:09"
 title    = "LibWeb: Run automatic box type transformations in Rust"

@@ -1,6 +1,6 @@
 ladybird = "e9a97455ab17f3b263926d372c7b9c23b60c1aae"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-19"
 time     = "08:44"
 title    = "LibWeb: Select the editing host's contents for execCommand selectAll"

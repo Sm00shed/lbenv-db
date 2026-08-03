@@ -1,6 +1,6 @@
 ladybird = "92206a2249ab528f1ce077beb629ab407e6062b6"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "bf1d509f"
+vcpkg    = "bf1d509f8004f23e0683101b13f0b26dfbc959d52961755a67d6aea80eaf0ac6"
 date     = "2026-07-24"
 time     = "21:29"
 title    = "Meta: Update the remaining pinned dependencies"

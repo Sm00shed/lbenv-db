@@ -1,6 +1,6 @@
 ladybird = "bff5bd013cf3b4aa2d765350af9f04f2e4755685"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-25"
 time     = "17:40"
 title    = "LibWasm/Cranelift: Emit scalar accesses to all memories inline"

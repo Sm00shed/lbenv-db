@@ -1,6 +1,6 @@
 ladybird = "830d196707390f8a57cb139f63e56c8e57d397d1"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-28"
 time     = "21:35"
 title    = "LibWeb: Move rendered text into a Rust-owned arena side table"

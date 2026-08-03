@@ -1,6 +1,6 @@
 ladybird = "5baf8116efdeafc74f883e5c2bf9f12d9d80c608"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-18"
 time     = "15:26"
 title    = "AK+Meta: Update simdutf to 9.0.0"

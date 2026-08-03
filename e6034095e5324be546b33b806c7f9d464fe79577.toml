@@ -1,6 +1,6 @@
 ladybird = "e6034095e5324be546b33b806c7f9d464fe79577"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-30"
 time     = "17:50"
 title    = "LibWeb: Move grid auto-flow to the box twin and delete the field schema"

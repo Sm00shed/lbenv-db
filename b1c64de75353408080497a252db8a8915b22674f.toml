@@ -1,6 +1,6 @@
 ladybird = "b1c64de75353408080497a252db8a8915b22674f"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-25"
 time     = "09:50"
 title    = "LibWeb: Make AudioParamTimeline safe to share across threads"

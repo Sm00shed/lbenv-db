@@ -1,6 +1,6 @@
 ladybird = "c21f47aff5ba51ac48dadbf01f01aadcc9ba0d86"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989"
+vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
 date     = "2026-07-23"
 time     = "18:44"
 title    = "LibCore: Translate bitmask notifier types in the Windows event loop"

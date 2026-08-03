@@ -1,6 +1,6 @@
 ladybird = "b9a0471cc17a1c96f75a4d4109df8777c46785c9"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "a6f34dff"
+vcpkg    = "a6f34dffaa5e4a6dddb4cb1a98360cb54166cdb5b4ee571157ea0366d653d040"
 date     = "2026-07-17"
 time     = "08:58"
 title    = "LibWeb: Widen Rust An+B matching arithmetic"

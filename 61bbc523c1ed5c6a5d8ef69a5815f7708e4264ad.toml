@@ -1,6 +1,6 @@
 ladybird = "61bbc523c1ed5c6a5d8ef69a5815f7708e4264ad"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-26"
 time     = "21:18"
 title    = "LibWeb: Share acquired AudioBuffer contents instead of copying them"

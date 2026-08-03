@@ -1,6 +1,6 @@
 ladybird = "a9019734203b70feaf65b3361facb735e5813ecd"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-29"
 time     = "15:13"
 title    = "LibWeb: Bound realtime audio trimming to rendered frames"

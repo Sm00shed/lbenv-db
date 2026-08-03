@@ -1,6 +1,6 @@
 ladybird = "3795f572e69497c326aa747d317a8b8af6e028b7"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "a6f34dff"
+vcpkg    = "a6f34dffaa5e4a6dddb4cb1a98360cb54166cdb5b4ee571157ea0366d653d040"
 date     = "2026-07-18"
 time     = "00:45"
 title    = "LibWeb: Rewrite table border conflict resolution with a push model"

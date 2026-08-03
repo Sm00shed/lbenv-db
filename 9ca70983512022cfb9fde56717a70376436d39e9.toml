@@ -1,6 +1,6 @@
 ladybird = "9ca70983512022cfb9fde56717a70376436d39e9"
 nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a23531"
+vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
 date     = "2026-07-28"
 time     = "23:19"
 title    = "LibWeb: Reuse intrinsic inline measurements"
