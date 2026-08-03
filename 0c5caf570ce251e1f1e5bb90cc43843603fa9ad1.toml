@@ -1,0 +1,7 @@
+ladybird = "0c5caf570ce251e1f1e5bb90cc43843603fa9ad1"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "d53fe39c"
+date     = "2026-07-24"
+time     = "21:29"
+title    = "Meta: Update the image decoding libraries"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

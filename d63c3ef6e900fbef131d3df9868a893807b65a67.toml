@@ -1,0 +1,7 @@
+ladybird = "d63c3ef6e900fbef131d3df9868a893807b65a67"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-19"
+time     = "22:25"
+title    = "LibWeb: Use logical names for line box geometry"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "ee4a8997ed0335ba239a3e843acafcf038ca9116"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "21:51"
+title    = "LibWeb: Answer three tree-builder callbacks from the layout node arena"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

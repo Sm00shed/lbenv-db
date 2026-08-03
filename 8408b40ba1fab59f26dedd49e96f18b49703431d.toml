@@ -1,0 +1,7 @@
+ladybird = "8408b40ba1fab59f26dedd49e96f18b49703431d"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "14:25"
+title    = "LibWeb: Make font/viewport-relative length ratio lookups reusable"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "67cac27b55c2f07e7c130229bc1082a97de7005e"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "17:33"
+title    = "LibDevTools: Add a hook to notify when the devtools socket disconnects"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

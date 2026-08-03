@@ -1,0 +1,7 @@
+ladybird = "8cc5d7a5ff3b2118a4f94e9aaafb1868c56eea11"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-15"
+time     = "15:38"
+title    = "LibWeb: Skip inactive visual context computations"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

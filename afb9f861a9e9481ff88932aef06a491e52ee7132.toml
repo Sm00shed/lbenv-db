@@ -1,0 +1,7 @@
+ladybird = "afb9f861a9e9481ff88932aef06a491e52ee7132"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "00:02"
+title    = "AK+LibCore: Make a base SPSC queue for in-process and shared versions"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

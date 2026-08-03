@@ -1,0 +1,7 @@
+ladybird = "bd4896c5d16bff03ebcc4bf2230ae17942d87d42"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-16"
+time     = "16:17"
+title    = "test-web: Report Crashed when the Compositor process dies mid-test"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "c667d4ce8fbd6488636a0c27f19f5c01de4d7742"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-18"
+time     = "11:12"
+title    = "LibJS: Omit jumps to the next AsmInt label"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

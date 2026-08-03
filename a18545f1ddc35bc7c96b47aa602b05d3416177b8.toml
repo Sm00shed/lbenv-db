@@ -1,0 +1,7 @@
+ladybird = "a18545f1ddc35bc7c96b47aa602b05d3416177b8"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-23"
+time     = "19:09"
+title    = "Compositor: Clear damaged pixels to the canvas color"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "5586647baf6690c2a7f287334d2d2e1a8da6d3a5"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "14:25"
+title    = "Tests: Import some `SVG{Animated}Length` tests"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "1df253b1a5587ed3609d845bf358f311735417ee"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-17"
+time     = "17:54"
+title    = "LibWeb: Test percentage minimums on stretched flex items"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

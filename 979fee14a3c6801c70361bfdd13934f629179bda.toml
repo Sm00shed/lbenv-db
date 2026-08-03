@@ -1,0 +1,7 @@
+ladybird = "979fee14a3c6801c70361bfdd13934f629179bda"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "20:53"
+title    = "LibWeb: Honor a zero `fit-content` argument when sizing a table"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

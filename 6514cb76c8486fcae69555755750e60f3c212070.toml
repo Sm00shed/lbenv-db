@@ -1,0 +1,7 @@
+ladybird = "6514cb76c8486fcae69555755750e60f3c212070"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "00:02"
+title    = "Tests/LibWeb: Ensure that media in hidden pages still fire timeupdate"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

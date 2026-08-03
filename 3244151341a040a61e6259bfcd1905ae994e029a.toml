@@ -1,0 +1,7 @@
+ladybird = "3244151341a040a61e6259bfcd1905ae994e029a"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f"
+date     = "2026-08-01"
+time     = "13:59"
+title    = "LibWebView: Clear reload pending for all matching document states"
+flake    = "3ff1553f8597dcdcca9ed9ab995952513d307b0a"

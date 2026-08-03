@@ -1,0 +1,7 @@
+ladybird = "6f8a8acd03a7de3eb60cff7a8bc1dc750944afe9"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "00:02"
+title    = "LibMedia+LibWeb: Provide video sinks through a trivial handle"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

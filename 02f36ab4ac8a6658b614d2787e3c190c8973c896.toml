@@ -1,0 +1,7 @@
+ladybird = "02f36ab4ac8a6658b614d2787e3c190c8973c896"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-23"
+time     = "12:04"
+title    = "LibWeb: Seed nested display list offsets as tree root transforms"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

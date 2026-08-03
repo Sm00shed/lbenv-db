@@ -1,0 +1,7 @@
+ladybird = "02d95f3985810cd8e9a82e1f0797e1963a0d76fd"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-25"
+time     = "13:39"
+title    = "LibJS: Disassemble interpreter handlers in bytecode dumps"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

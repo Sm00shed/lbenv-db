@@ -1,0 +1,7 @@
+ladybird = "6c944abcc55a2d2514e068437744fd8ff72664b3"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "17:50"
+title    = "LibWeb: Replace computed values only after the layout pass returns"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

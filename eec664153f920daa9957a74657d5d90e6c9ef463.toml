@@ -1,0 +1,7 @@
+ladybird = "eec664153f920daa9957a74657d5d90e6c9ef463"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f"
+date     = "2026-08-02"
+time     = "16:25"
+title    = "LibWeb: Use `undefined` rather than `void` in SVG interface IDL"
+flake    = "1c87fb298ac380302a838e957dd82eb56addbd01"

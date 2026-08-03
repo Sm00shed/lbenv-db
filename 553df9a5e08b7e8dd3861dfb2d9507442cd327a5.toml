@@ -1,0 +1,7 @@
+ladybird = "553df9a5e08b7e8dd3861dfb2d9507442cd327a5"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-22"
+time     = "14:35"
+title    = "Meta+UI: Split macOS entitlements and make codesigning unconditional"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

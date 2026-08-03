@@ -1,0 +1,7 @@
+ladybird = "eb9a7fee52d2e6b4a4e33877f10a609065c6b9ad"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-25"
+time     = "01:28"
+title    = "LibWeb: Drive keyframe value preparation from Rust"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

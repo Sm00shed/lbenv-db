@@ -1,0 +1,7 @@
+ladybird = "e0869bbd4d73d6066812c9d625ef96d5a92e05f4"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f"
+date     = "2026-08-02"
+time     = "16:25"
+title    = "LibWeb: Require `baudRate` when opening a serial port"
+flake    = "1c87fb298ac380302a838e957dd82eb56addbd01"

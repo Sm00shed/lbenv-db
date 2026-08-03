@@ -1,0 +1,7 @@
+ladybird = "c0862169acd3291ff50fdaa378c3620a440c46d1"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-27"
+time     = "08:09"
+title    = "LibJS: Borrow immutable Flap checking context"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

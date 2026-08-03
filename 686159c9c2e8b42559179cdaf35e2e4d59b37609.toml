@@ -1,0 +1,7 @@
+ladybird = "686159c9c2e8b42559179cdaf35e2e4d59b37609"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "20:53"
+title    = "LibWeb: Compare tab advance against `0.5ch` without rounding first"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

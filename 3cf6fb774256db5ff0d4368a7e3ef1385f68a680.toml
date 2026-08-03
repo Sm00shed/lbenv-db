@@ -1,0 +1,7 @@
+ladybird = "3cf6fb774256db5ff0d4368a7e3ef1385f68a680"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "11:35"
+title    = "LibWeb: Move style computation into the shared libweb crate"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

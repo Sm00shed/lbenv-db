@@ -1,0 +1,7 @@
+ladybird = "2d552e439dbf6e9fe1f082f16decf12a6c4effca"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-21"
+time     = "00:09"
+title    = "LibWeb: Absolutize calculated style values over the Rust calc tree"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

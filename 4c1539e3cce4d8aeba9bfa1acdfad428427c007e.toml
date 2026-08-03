@@ -1,0 +1,7 @@
+ladybird = "4c1539e3cce4d8aeba9bfa1acdfad428427c007e"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-23"
+time     = "14:23"
+title    = "Tests: Pin current mask rendering with reference tests"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

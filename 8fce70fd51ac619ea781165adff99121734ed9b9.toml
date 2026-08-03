@@ -1,0 +1,7 @@
+ladybird = "8fce70fd51ac619ea781165adff99121734ed9b9"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-22"
+time     = "01:37"
+title    = "LibWeb: Match ID selectors case-insensitively in quirks mode"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

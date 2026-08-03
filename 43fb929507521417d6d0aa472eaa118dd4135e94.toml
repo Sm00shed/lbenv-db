@@ -1,0 +1,7 @@
+ladybird = "43fb929507521417d6d0aa472eaa118dd4135e94"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-29"
+time     = "13:52"
+title    = "UI/AppKit: Add simple context menu to unselected LocationSearchField"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

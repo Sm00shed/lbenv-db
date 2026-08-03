@@ -1,0 +1,7 @@
+ladybird = "62e0e2bacd00955aa09ad5adaf08a94fe7e462a7"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "21:51"
+title    = "LibWeb: Detect SVG resource cycles with one slot lookup per resource"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "d6c5c748f71e77ba22e15ffd0573643089e44a98"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-18"
+time     = "18:38"
+title    = "Utilities/wasm: Let --export-js imports re-enter wasm via `this`"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

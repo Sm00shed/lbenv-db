@@ -1,0 +1,7 @@
+ladybird = "209d206dfa26b20723281c647c689a5998e95b56"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f"
+date     = "2026-08-01"
+time     = "23:18"
+title    = "LibWeb: Relayout when an editability flip changes stamped layout facts"
+flake    = "50ed3c992c04d4b31cc41cc270b6a240ab7af10a"

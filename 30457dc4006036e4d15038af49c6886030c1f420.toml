@@ -1,0 +1,7 @@
+ladybird = "30457dc4006036e4d15038af49c6886030c1f420"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "17:50"
+title    = "LibWeb: Precompute layout font facts into a typed prefix twin"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

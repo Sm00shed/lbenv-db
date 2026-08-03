@@ -1,0 +1,7 @@
+ladybird = "9164267b51f671054a5898e38424996ab5d9a431"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-25"
+time     = "13:39"
+title    = "LibJS: Add the flapc compiler driver"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

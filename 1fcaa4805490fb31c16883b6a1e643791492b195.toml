@@ -1,0 +1,7 @@
+ladybird = "1fcaa4805490fb31c16883b6a1e643791492b195"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "17:33"
+title    = "UI/Qt: Add a Launch Client button to the DevTools banner"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

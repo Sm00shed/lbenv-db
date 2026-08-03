@@ -1,0 +1,7 @@
+ladybird = "a52f975b9cbc5c5199d7c3c61b2bc306b903715e"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-22"
+time     = "21:13"
+title    = "LibWeb: Resolve custom property variables in Rust"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

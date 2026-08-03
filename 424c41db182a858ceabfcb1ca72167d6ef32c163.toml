@@ -1,0 +1,7 @@
+ladybird = "424c41db182a858ceabfcb1ca72167d6ef32c163"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-22"
+time     = "09:21"
+title    = "LibWeb: Implement smooth programmatic scrolling"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

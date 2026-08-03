@@ -1,0 +1,7 @@
+ladybird = "000ac8be1b0e31b6f533b7e14b7c035e161276f7"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-16"
+time     = "13:56"
+title    = "Tests: Recognize .xml files as tests"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

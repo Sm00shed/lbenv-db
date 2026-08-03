@@ -1,0 +1,7 @@
+ladybird = "8c1521aaf6e715bb8d46aee508dbd5c93648aa6e"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-17"
+time     = "21:34"
+title    = "LibWeb: Don't re-apply relative insets to frozen boundary geometry"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

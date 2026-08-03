@@ -1,0 +1,7 @@
+ladybird = "9654e057cd37dbdc23d4c38bfa8d0a4d4a3aed78"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-21"
+time     = "00:09"
+title    = "LibWeb: Restore spec text comments lost in the Rust calc port"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

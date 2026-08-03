@@ -1,0 +1,7 @@
+ladybird = "fa65fc9141b27cbe2e022d072bd0faa944344e1e"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-17"
+time     = "17:54"
+title    = "LibWeb: Harden replaced intrinsic sizing"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

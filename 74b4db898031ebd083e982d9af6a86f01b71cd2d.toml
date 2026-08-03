@@ -1,0 +1,7 @@
+ladybird = "74b4db898031ebd083e982d9af6a86f01b71cd2d"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "00:02"
+title    = "LibMedia: Stop increasing duration from decoders' seen frames"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

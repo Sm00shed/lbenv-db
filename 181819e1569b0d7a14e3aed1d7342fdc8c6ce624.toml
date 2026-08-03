@@ -1,0 +1,7 @@
+ladybird = "181819e1569b0d7a14e3aed1d7342fdc8c6ce624"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-20"
+time     = "23:07"
+title    = "LibWeb: Store `@function` parameter default values in parsed form"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

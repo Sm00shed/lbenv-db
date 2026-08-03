@@ -1,0 +1,7 @@
+ladybird = "eeb31d23363496714eb3f10f7de1b18284988552"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-21"
+time     = "00:09"
+title    = "LibWeb: Share style group payloads with the parent element"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

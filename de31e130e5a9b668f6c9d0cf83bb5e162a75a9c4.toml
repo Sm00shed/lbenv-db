@@ -1,0 +1,7 @@
+ladybird = "de31e130e5a9b668f6c9d0cf83bb5e162a75a9c4"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-21"
+time     = "00:09"
+title    = "LibWeb: Remove more code orphaned by the native Rust calc tree"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

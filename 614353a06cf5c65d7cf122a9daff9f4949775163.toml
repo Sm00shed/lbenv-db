@@ -1,0 +1,7 @@
+ladybird = "614353a06cf5c65d7cf122a9daff9f4949775163"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-17"
+time     = "19:07"
+title    = "LibWeb: Preserve auto in computed caret colors"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

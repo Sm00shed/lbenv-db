@@ -1,0 +1,7 @@
+ladybird = "d01e1cf4380f12f41b4dc9079979b076f2db8700"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "21:35"
+title    = "LibWeb: Delete the C++ ChunkIterator now that chunking lives in Rust"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,0 +1,7 @@
+ladybird = "e4702dea3ba464147cdd05651c5bc2ba62cd5fb6"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-22"
+time     = "01:37"
+title    = "LibWeb: Match custom states through a live DOM query"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

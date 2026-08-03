@@ -1,0 +1,7 @@
+ladybird = "bb6f3aa65754a37d9fd91a4ada2a15be6f574c36"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-29"
+time     = "21:42"
+title    = "LibWeb: Consider pending smooth scrolls when revealing an element"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

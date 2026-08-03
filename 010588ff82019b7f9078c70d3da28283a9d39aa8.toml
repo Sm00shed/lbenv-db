@@ -1,0 +1,7 @@
+ladybird = "010588ff82019b7f9078c70d3da28283a9d39aa8"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "00:02"
+title    = "LibMedia+Tests: Base the audio converter interface on time stretchers"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

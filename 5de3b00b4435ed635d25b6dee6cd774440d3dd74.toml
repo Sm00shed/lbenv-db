@@ -1,0 +1,7 @@
+ladybird = "5de3b00b4435ed635d25b6dee6cd774440d3dd74"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-30"
+time     = "17:33"
+title    = "LibCore: Support opening files without following symlinks"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

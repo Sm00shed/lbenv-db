@@ -1,0 +1,7 @@
+ladybird = "52dbdd1aded53b3f335c531aee131f62edfc5802"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-16"
+time     = "01:31"
+title    = "LibWeb: Rebuild only referencing subtrees on SVG resource removal"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

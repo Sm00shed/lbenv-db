@@ -1,0 +1,7 @@
+ladybird = "207d5e5af6f4446ce3344c14c9ed2520c6ca2ca4"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "a6f34dff"
+date     = "2026-07-16"
+time     = "22:15"
+title    = "LibWeb: Store CSS filter lists as StyleValueList"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

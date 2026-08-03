@@ -1,0 +1,7 @@
+ladybird = "de1134d1b05a274a2ca006a39d25d0f398a9126f"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-29"
+time     = "18:26"
+title    = "LibWeb: Invalidate parts after host selector changes"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

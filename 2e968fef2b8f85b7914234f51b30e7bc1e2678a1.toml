@@ -1,0 +1,7 @@
+ladybird = "2e968fef2b8f85b7914234f51b30e7bc1e2678a1"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "6d9a3989"
+date     = "2026-07-21"
+time     = "23:49"
+title    = "LibWeb: Remove unused cumulative offset"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

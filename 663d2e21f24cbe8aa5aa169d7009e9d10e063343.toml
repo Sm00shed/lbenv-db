@@ -1,0 +1,7 @@
+ladybird = "663d2e21f24cbe8aa5aa169d7009e9d10e063343"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-28"
+time     = "00:02"
+title    = "LibMedia: Write to a block parameter in audio time stretchers"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

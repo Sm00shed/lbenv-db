@@ -1,0 +1,7 @@
+ladybird = "f7ce659a3da9007ea39f901f622a9108f7b0988c"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "e9a23531"
+date     = "2026-07-27"
+time     = "08:09"
+title    = "LibJS: Let finalization take the graph's instructions"
+flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"
