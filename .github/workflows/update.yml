@@ -54,9 +54,16 @@ jobs:
               ? fs.readFileSync(latestFile, 'utf8').trim()
               : null;
 
-            // nixpkgs rev from flake.lock
-            const nixpkgs = JSON.parse(fs.readFileSync('flake.lock', 'utf8'))
-              .nodes.nixpkgs.locked.rev;
+            // nixpkgs rev carried forward from last TOML (changes only on drift)
+            let nixpkgs = null;
+            if (lastSha && fs.existsSync(`${lastSha}.toml`)) {
+              const prev = fs.readFileSync(`${lastSha}.toml`, 'utf8');
+              nixpkgs = prev.match(/^nixpkgs\s*=\s*"([^"]+)"/m)?.[1] ?? null;
+            }
+            if (!nixpkgs) {
+              core.setFailed('No nixpkgs rev found – create initial TOML with nixpkgs set.');
+              return;
+            }
 
             // Collect commits newer than lastSha
             const fresh = [];
