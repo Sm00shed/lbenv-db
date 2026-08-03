@@ -20,46 +20,68 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Update versions.json
+      - name: Check for open vcpkg-drift issue
+        id: drift-check
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'vcpkg-drift',
+              state: 'open',
+            });
+            if (issues.data.length > 0) {
+              core.warning(`Open vcpkg-drift issue found – aborting until resolved.`);
+              core.setOutput('blocked', 'true');
+            } else {
+              core.setOutput('blocked', 'false');
+            }
+
+      - name: Update DB
+        if: steps.drift-check.outputs.blocked == 'false'
         uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
             const crypto = require('crypto');
             const REPO = { owner: 'LadybirdBrowser', repo: 'ladybird' };
-            const MAX_PAGES = 3; // cap: abort if last commit not found within 300
+            const MAX_PAGES = 3;
 
-            const versions = JSON.parse(fs.readFileSync('versions.json', 'utf8'));
+            // Read latest recorded SHA from `latest` file
+            const latestFile = 'latest';
+            const lastSha = fs.existsSync(latestFile)
+              ? fs.readFileSync(latestFile, 'utf8').trim()
+              : null;
+
+            // nixpkgs rev from flake.lock
             const nixpkgs = JSON.parse(fs.readFileSync('flake.lock', 'utf8'))
               .nodes.nixpkgs.locked.rev;
 
-            const recorded = Object.values(versions);
-            const last = recorded.at(-1) ?? null;
-
-            // Collect commits newer than last recorded; date is in list response (no extra call).
+            // Collect commits newer than lastSha
             const fresh = [];
             let pages = 0;
-            let found = !last; // first run: no last → seed only newest
+            let found = !lastSha;
             outer:
             for await (const page of github.paginate.iterator(
               github.rest.repos.listCommits, { ...REPO, per_page: 100 },
             )) {
               if (++pages > MAX_PAGES) break;
               for (const c of page.data) {
-                if (last && c.sha === last.ladybird) { found = true; break outer; }
+                if (lastSha && c.sha === lastSha) { found = true; break outer; }
                 fresh.push({
                   sha: c.sha,
-                  date: c.commit.committer.date.slice(0, 10),   // YYYY-MM-DD (UTC)
-                  time: c.commit.committer.date.slice(11, 16),  // HH:MM (UTC)
+                  date: c.commit.committer.date.slice(0, 10),
+                  time: c.commit.committer.date.slice(11, 16),
                   title: c.commit.message.split('\n')[0].slice(0, 100),
                 });
-                if (!last) break outer; // seed: only newest commit
+                if (!lastSha) break outer;
               }
             }
+
             if (!found) {
-              // last.ladybird not in newest 300 commits → force-push or stale versions.json
               core.setFailed(
-                `Last recorded commit ${last.ladybird} not found in newest `
+                `Last recorded commit ${lastSha} not found in newest `
                 + `${MAX_PAGES * 100} commits; aborting.`,
               );
               return;
@@ -71,42 +93,60 @@ jobs:
               return;
             }
 
-            // Hash normalised overrides (ignores reformatting upstream).
+            // vcpkg overrides at a given ref
             const overridesAt = async (ref) => {
               const f = await github.rest.repos.getContent(
                 { ...REPO, path: 'vcpkg.json', ref },
               );
               const json = JSON.parse(Buffer.from(f.data.content, 'base64').toString());
-              return Object.fromEntries((json.overrides ?? []).map(p => [p.name, p.version]));
-            };
-            const hash = (o) => crypto.createHash('sha256')
-              .update(JSON.stringify(Object.entries(o).sort()))
-              .digest('hex').slice(0, 8);
-
-            let latestOverrides = null;
-            for (const c of fresh) {
-              const o = await overridesAt(c.sha);
-              latestOverrides = o;
-              versions[`${c.date}_${c.sha.slice(0, 8)}`] = {
-                ladybird: c.sha,
-                nixpkgs,
-                vcpkg: hash(o),
-                time: c.time,
-                title: c.title,
-                // flake set in commit 2 (hash only known after commit 1 is pushed)
+              return {
+                baseline: json['builtin-baseline'] ?? null,
+                overrides: Object.fromEntries((json.overrides ?? []).map(p => [p.name, p.version])),
               };
+            };
+
+            const hashOverrides = (o) => crypto.createHash('sha256')
+              .update(JSON.stringify(Object.entries(o).sort()))
+              .digest('hex');
+
+            let latestVcpkg = null;
+            for (const c of fresh) {
+              const v = await overridesAt(c.sha);
+              latestVcpkg = v;
+
+              // Write TOML file (full hashes, no flake yet)
+              const toml = [
+                `ladybird = "${c.sha}"`,
+                `nixpkgs  = "${nixpkgs}"`,
+                `vcpkg    = "${hashOverrides(v.overrides)}"`,
+                `baseline = "${v.baseline ?? ''}"`,
+                `date     = "${c.date}"`,
+                `time     = "${c.time}"`,
+                `title    = "${c.title.replace(/"/g, '\\"')}"`,
+                `# flake filled in commit 2`,
+              ].join('\n') + '\n';
+
+              fs.writeFileSync(`${c.sha}.toml`, toml);
             }
-            fs.writeFileSync('versions.json', JSON.stringify(versions, null, 2) + '\n');
+
+            // Update `latest`
+            fs.writeFileSync(latestFile, fresh.at(-1).sha + '\n');
             core.info(`Added ${fresh.length} commits`);
 
-            // Drift check: fetch prev overrides only if vcpkg hash changed.
-            if (!last?.vcpkg || last.vcpkg === hash(latestOverrides)) return;
+            // Drift check
+            const prevTomlPath = lastSha ? `${lastSha}.toml` : null;
+            if (!prevTomlPath || !fs.existsSync(prevTomlPath)) return;
 
-            const prev = await overridesAt(last.ladybird);
-            const rows = [...new Set([...Object.keys(prev), ...Object.keys(latestOverrides)])]
+            const prevToml = fs.readFileSync(prevTomlPath, 'utf8');
+            const prevVcpkgHash = prevToml.match(/^vcpkg\s*=\s*"([^"]+)"/m)?.[1];
+            if (!prevVcpkgHash || prevVcpkgHash === hashOverrides(latestVcpkg.overrides)) return;
+
+            // Drift detected – create issue
+            const prev = await overridesAt(lastSha);
+            const rows = [...new Set([...Object.keys(prev.overrides), ...Object.keys(latestVcpkg.overrides)])]
               .sort()
-              .filter(p => prev[p] !== latestOverrides[p])
-              .map(p => `| ${p} | ${prev[p] ?? '-'} | ${latestOverrides[p] ?? '-'} |`);
+              .filter(p => prev.overrides[p] !== latestVcpkg.overrides[p])
+              .map(p => `| ${p} | ${prev.overrides[p] ?? '-'} | ${latestVcpkg.overrides[p] ?? '-'} |`);
 
             const head = fresh.at(-1).sha.slice(0, 8);
             await github.rest.issues.create({
@@ -117,7 +157,7 @@ jobs:
               body: [
                 '## vcpkg.json changed in Ladybird',
                 '',
-                `\`${last.ladybird.slice(0, 8)}\` -> \`${head}\``,
+                `\`${lastSha.slice(0, 8)}\` -> \`${head}\``,
                 '',
                 '| Package | before | now |',
                 '|---|---|---|',
@@ -128,29 +168,36 @@ jobs:
             });
 
       - name: Commit and push
+        if: steps.drift-check.outputs.blocked == 'false'
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add versions.json
+          git add *.toml latest
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          COUNT=$(git diff --cached versions.json | grep -c '^+.*"ladybird"' || true)
+          COUNT=$(git diff --cached --name-only | grep -c '\.toml$' || true)
 
-          # Commit 1: entries without flake (hash unknown until after push)
-          git commit -m "versions: add $COUNT new Ladybird commits ($(date -u +%F))"
+          # Commit 1: new TOML files without flake rev
+          git commit -m "db: add $COUNT Ladybird commits ($(date -u +%F))"
           git pull --rebase --autostash
           git push
           FLAKE_REV=$(git rev-parse HEAD)
 
-          # Commit 2: backfill flake rev into all entries still missing it
-          jq --arg rev "$FLAKE_REV" \
-            'with_entries(if .value.flake == null then .value.flake = $rev else . end)' \
-            versions.json > versions.tmp && mv versions.tmp versions.json
+          # Commit 2: backfill flake rev into new TOML files
+          for f in *.toml; do
+            if grep -q '^# flake filled in commit 2' "$f"; then
+              sed -i "s|^# flake filled in commit 2|flake    = \"$FLAKE_REV\"|" "$f"
+            fi
+          done
 
-          git add versions.json
-          git commit -m "versions: record flake rev ${FLAKE_REV:0:8}"
+          git add *.toml
+          if git diff --cached --quiet; then
+            echo "No flake backfill needed"
+            exit 0
+          fi
+          git commit -m "db: backfill flake rev ${FLAKE_REV:0:8}"
           git pull --rebase --autostash
           git push
