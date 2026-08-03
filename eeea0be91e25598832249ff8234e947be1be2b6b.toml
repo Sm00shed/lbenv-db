@@ -1,0 +1,9 @@
+ladybird = "eeea0be91e25598832249ff8234e947be1be2b6b"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
+baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
+date     = "2026-08-03"
+time     = "14:20"
+title    = "LibGfx+LibWeb: Cull hidden backfaces during painting and hit testing"
+# flake filled in commit 2
+lbenv    = "6fb9b4a73fa10de3e195b015315c8c84f81ab726"
