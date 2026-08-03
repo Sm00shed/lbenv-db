@@ -5,4 +5,4 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-03"
 time     = "09:18"
 title    = "LibWeb: Resolve relative positions during the Rust layout commit"
-# flake filled in commit 2
+flake    = "360632d261491032d18e614ee30c99dabe7b01c1"
