@@ -1,0 +1,9 @@
+ladybird = "c7545cd20c6abd2c8bcc884d6322ec1a55d8db76"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
+baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
+date     = "2026-08-05"
+time     = "21:15"
+title    = "LibWeb: Implement detaching a MediaSource from its media element"
+# flake filled in commit 2
+lbenv    = "71f6cd0b04ce3e60f7514442beca737e44cc27b9"
