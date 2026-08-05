@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-05"
 time     = "10:58"
 title    = "LibJS: Pause at manually configured breakpoints"
-# flake filled in commit 2
+flake    = "012e8eb28f4f29332053f5723d9afee37db3bceb"
 lbenv    = "71f6cd0b04ce3e60f7514442beca737e44cc27b9"
