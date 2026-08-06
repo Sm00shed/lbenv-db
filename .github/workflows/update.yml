@@ -48,13 +48,11 @@ jobs:
             const REPO = { owner: 'LadybirdBrowser', repo: 'ladybird' };
             const MAX_PAGES = 100;
 
-            // Read latest recorded SHA from `latest` file
             const latestFile = 'latest';
             const lastSha = fs.existsSync(latestFile)
               ? fs.readFileSync(latestFile, 'utf8').trim()
               : null;
 
-            // nixpkgs rev carried forward from last TOML (changes only on drift)
             let nixpkgs = null;
             if (lastSha && fs.existsSync(`${lastSha}.toml`)) {
               const prev = fs.readFileSync(`${lastSha}.toml`, 'utf8');
@@ -65,12 +63,10 @@ jobs:
               return;
             }
 
-            // Current lbenv build-logic rev (Sm00shed/lbenv HEAD); pins flake.nix + overrides
             const lbenv = (await github.rest.repos.getCommit(
               { owner: 'Sm00shed', repo: 'lbenv', ref: 'HEAD' },
             )).data.sha;
 
-            // Collect commits newer than lastSha
             const fresh = [];
             let pages = 0;
             let found = !lastSha;
@@ -105,14 +101,13 @@ jobs:
               return;
             }
 
-            // vcpkg overrides at a given ref
             const overridesAt = async (ref) => {
               const f = await github.rest.repos.getContent(
                 { ...REPO, path: 'vcpkg.json', ref },
               );
               const json = JSON.parse(Buffer.from(f.data.content, 'base64').toString());
               return {
-                baseline: json['builtin-baseline'] ?? null,
+                baseline: json['builtin-baseline'] ?? '',
                 overrides: Object.fromEntries((json.overrides ?? []).map(p => [p.name, p.version])),
               };
             };
@@ -121,17 +116,65 @@ jobs:
               .update(JSON.stringify(Object.entries(o).sort()))
               .digest('hex');
 
-            let latestVcpkg = null;
+            // Previous vcpkg state for drift comparison (null = no baseline, skip check)
+            let prevV = null;
+            let prevHash = null;
+            if (lastSha && fs.existsSync(`${lastSha}.toml`)) {
+              const prevToml = fs.readFileSync(`${lastSha}.toml`, 'utf8');
+              prevHash = prevToml.match(/^vcpkg\s*=\s*"([^"]+)"/m)?.[1] ?? null;
+              if (prevHash) prevV = await overridesAt(lastSha);
+            }
+
+            let lastGoodSha = lastSha;
+            let written = 0;
+
             for (const c of fresh) {
               const v = await overridesAt(c.sha);
-              latestVcpkg = v;
+              const currentHash = hashOverrides(v.overrides);
 
-              // Write TOML file (full hashes, no flake yet)
+              if (prevHash !== null && (currentHash !== prevHash || v.baseline !== prevV.baseline)) {
+                const allPkgs = [...new Set([
+                  ...Object.keys(prevV.overrides),
+                  ...Object.keys(v.overrides),
+                ])].sort();
+                const rows = allPkgs
+                  .filter(p => prevV.overrides[p] !== v.overrides[p])
+                  .map(p => `| ${p} | ${prevV.overrides[p] ?? '-'} | ${v.overrides[p] ?? '-'} |`);
+
+                const head = c.sha.slice(0, 8);
+                const base = (lastGoodSha ?? '?').slice(0, 8);
+                const bodyLines = [
+                  '## vcpkg.json changed in Ladybird',
+                  '',
+                  `\`${base}\` -> \`${head}\``,
+                  '',
+                ];
+                if (prevV.baseline !== v.baseline) {
+                  bodyLines.push(
+                    `**builtin-baseline**: \`${prevV.baseline || '-'}\` → \`${v.baseline || '-'}\``,
+                    '',
+                  );
+                }
+                if (rows.length) {
+                  bodyLines.push('| Package | before | now |', '|---|---|---|', ...rows, '');
+                }
+                bodyLines.push('_Check whether the nixpkgs pins in `flake.nix` need adjusting._');
+
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: `vcpkg drift @ ${head}`,
+                  labels: ['vcpkg-drift'],
+                  body: bodyLines.join('\n'),
+                });
+                break;
+              }
+
               const toml = [
                 `ladybird = "${c.sha}"`,
                 `nixpkgs  = "${nixpkgs}"`,
-                `vcpkg    = "${hashOverrides(v.overrides)}"`,
-                `baseline = "${v.baseline ?? ''}"`,
+                `vcpkg    = "${currentHash}"`,
+                `baseline = "${v.baseline}"`,
                 `date     = "${c.date}"`,
                 `time     = "${c.time}"`,
                 `title    = "${c.title.replace(/"/g, '\\"')}"`,
@@ -140,45 +183,16 @@ jobs:
               ].join('\n') + '\n';
 
               fs.writeFileSync(`${c.sha}.toml`, toml);
+              lastGoodSha = c.sha;
+              prevV = v;
+              prevHash = currentHash;
+              written++;
             }
 
-            // Update `latest`
-            fs.writeFileSync(latestFile, fresh.at(-1).sha + '\n');
-            core.info(`Added ${fresh.length} commits`);
-
-            // Drift check
-            const prevTomlPath = lastSha ? `${lastSha}.toml` : null;
-            if (!prevTomlPath || !fs.existsSync(prevTomlPath)) return;
-
-            const prevToml = fs.readFileSync(prevTomlPath, 'utf8');
-            const prevVcpkgHash = prevToml.match(/^vcpkg\s*=\s*"([^"]+)"/m)?.[1];
-            if (!prevVcpkgHash || prevVcpkgHash === hashOverrides(latestVcpkg.overrides)) return;
-
-            // Drift detected – create issue
-            const prev = await overridesAt(lastSha);
-            const rows = [...new Set([...Object.keys(prev.overrides), ...Object.keys(latestVcpkg.overrides)])]
-              .sort()
-              .filter(p => prev.overrides[p] !== latestVcpkg.overrides[p])
-              .map(p => `| ${p} | ${prev.overrides[p] ?? '-'} | ${latestVcpkg.overrides[p] ?? '-'} |`);
-
-            const head = fresh.at(-1).sha.slice(0, 8);
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `vcpkg drift @ ${head}`,
-              labels: ['vcpkg-drift'],
-              body: [
-                '## vcpkg.json changed in Ladybird',
-                '',
-                `\`${lastSha.slice(0, 8)}\` -> \`${head}\``,
-                '',
-                '| Package | before | now |',
-                '|---|---|---|',
-                ...rows,
-                '',
-                '_Check whether the nixpkgs pins in `flake.nix` need adjusting._',
-              ].join('\n'),
-            });
+            if (written > 0) {
+              fs.writeFileSync(latestFile, lastGoodSha + '\n');
+              core.info(`Added ${written} commits`);
+            }
 
       - name: Commit and push
         if: steps.drift-check.outputs.blocked == 'false'
