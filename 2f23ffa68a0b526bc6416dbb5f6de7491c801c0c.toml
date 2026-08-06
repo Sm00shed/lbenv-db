@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-06"
 time     = "06:52"
 title    = "Tests/LibWeb: Wait for srcdoc handler in gamepad iframe test"
-# flake filled in commit 2
+flake    = "a0e5c30c8adc49029bca4ad9b89d40312e8cc926"
 lbenv    = "71f6cd0b04ce3e60f7514442beca737e44cc27b9"
