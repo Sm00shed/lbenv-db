@@ -1,7 +1,0 @@
-ladybird = "9d060f05dd65fac9625621f4967e25a2c364bb93"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-01"
-time     = "01:17"
-title    = "LibWeb: Honor the `sizes` attribute on `<source>` elements"
-flake    = "3dab7eb2bc16cd2ebf7b4402d1984dc25be0d00f"

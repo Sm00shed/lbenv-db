@@ -1,7 +1,0 @@
-ladybird = "dd7e441a1e8b1a3c2324bc0be324e01a13319f47"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
-date     = "2026-07-21"
-time     = "20:19"
-title    = "LibWeb: Delete dead code hidden by allow(dead_code) in the style crate"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

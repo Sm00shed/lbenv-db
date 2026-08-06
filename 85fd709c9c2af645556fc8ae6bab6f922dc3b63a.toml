@@ -1,7 +1,0 @@
-ladybird = "85fd709c9c2af645556fc8ae6bab6f922dc3b63a"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-29"
-time     = "18:26"
-title    = "LibWeb: Don't autoscroll for middle-clicked text-fragment links"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

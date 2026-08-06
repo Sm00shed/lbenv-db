@@ -1,7 +1,0 @@
-ladybird = "0189451edbd30cc9c32289aebd376b2ef2af0d8e"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-01"
-time     = "17:34"
-title    = "LibWeb: Derive SVG element type facts from NodeKind"
-flake    = "5ce2a335e5cfc8ad768ce17f3a3ed4b9672134a5"

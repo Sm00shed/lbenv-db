@@ -1,7 +1,0 @@
-ladybird = "219f826b49f985dcb9dd9bc5c774227e75cd5468"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-30"
-time     = "19:05"
-title    = "LibWeb: Remove dead SVG text viewbox_origin declarations"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

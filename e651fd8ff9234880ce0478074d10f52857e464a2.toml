@@ -1,7 +1,0 @@
-ladybird = "e651fd8ff9234880ce0478074d10f52857e464a2"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
-date     = "2026-07-23"
-time     = "15:54"
-title    = "LibWebView+test-web: Refuse download requests in the test runner"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

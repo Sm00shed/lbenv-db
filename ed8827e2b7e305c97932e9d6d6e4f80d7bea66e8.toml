@@ -1,7 +1,0 @@
-ladybird = "ed8827e2b7e305c97932e9d6d6e4f80d7bea66e8"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-27"
-time     = "08:09"
-title    = "LibJS: Price Flap layouts with the machine planner"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

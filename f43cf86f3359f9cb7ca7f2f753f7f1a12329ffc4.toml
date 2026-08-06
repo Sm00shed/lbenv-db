@@ -1,7 +1,0 @@
-ladybird = "f43cf86f3359f9cb7ca7f2f753f7f1a12329ffc4"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-27"
-time     = "08:09"
-title    = "LibJS: Revisit an instruction's liveness only when a successor moves"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

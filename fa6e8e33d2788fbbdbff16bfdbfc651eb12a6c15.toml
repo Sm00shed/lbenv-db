@@ -1,7 +1,0 @@
-ladybird = "fa6e8e33d2788fbbdbff16bfdbfc651eb12a6c15"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-02"
-time     = "16:25"
-title    = "LibWeb: Require `SpeechRecognitionEvent` results"
-flake    = "1c87fb298ac380302a838e957dd82eb56addbd01"

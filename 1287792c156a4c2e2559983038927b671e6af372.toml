@@ -1,7 +1,0 @@
-ladybird = "1287792c156a4c2e2559983038927b671e6af372"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-27"
-time     = "08:09"
-title    = "LibJS: Bound Flap inline expansion"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

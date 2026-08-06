@@ -1,7 +1,0 @@
-ladybird = "94a55b0e9045b1e96307c5e4f0242309c589ecd4"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "a6f34dffaa5e4a6dddb4cb1a98360cb54166cdb5b4ee571157ea0366d653d040"
-date     = "2026-07-18"
-time     = "11:12"
-title    = "LibJS: Test large AsmInt lengths directly"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

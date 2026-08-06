@@ -1,7 +1,0 @@
-ladybird = "a787cd7b15d72424aa47c7faee1500e0cddc8529"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-01"
-time     = "21:31"
-title    = "LibWeb: Move the computed style accessor surface into the css module"
-flake    = "15ecab5170f9afceba385483e154b8e9b0deb4fc"

@@ -1,7 +1,0 @@
-ladybird = "42a28d1ad369eec7c1a0c620a962dd7004139281"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "a6f34dffaa5e4a6dddb4cb1a98360cb54166cdb5b4ee571157ea0366d653d040"
-date     = "2026-07-18"
-time     = "11:12"
-title    = "LibJS: Shift power-of-two AsmInt multiplications"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

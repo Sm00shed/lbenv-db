@@ -1,7 +1,0 @@
-ladybird = "093d525e6e8297afbad713eb46617ba706fb0d54"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-02"
-time     = "00:09"
-title    = "Tests: Import some CSS `d` property tests"
-flake    = "25e80431f332a1c901a280d0f0c3f0c2fadc7578"

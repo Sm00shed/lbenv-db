@@ -1,7 +1,0 @@
-ladybird = "39be5598f15f4fce2fc90a78b01bc4e111f07916"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-28"
-time     = "00:02"
-title    = "LibMedia: Mark video sinks as changed when they clear after a seek"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

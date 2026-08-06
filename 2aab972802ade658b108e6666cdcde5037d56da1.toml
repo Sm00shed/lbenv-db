@@ -1,7 +1,0 @@
-ladybird = "2aab972802ade658b108e6666cdcde5037d56da1"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
-date     = "2026-07-23"
-time     = "00:17"
-title    = "LibWeb: Compare keycodes instead of strings for media keybinds"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

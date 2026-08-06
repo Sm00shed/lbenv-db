@@ -1,7 +1,0 @@
-ladybird = "4ad7f563f98fb95d6108e90a8d292ce7e4fe01fb"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "6d9a3989d3ea015c28814800c60eb41c28469a5095438acde033dca6bf24b00e"
-date     = "2026-07-21"
-time     = "00:09"
-title    = "LibWeb: Compute border widths, corner shapes, and position-area in Rust"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

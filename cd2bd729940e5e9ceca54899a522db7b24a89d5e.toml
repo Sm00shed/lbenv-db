@@ -1,7 +1,0 @@
-ladybird = "cd2bd729940e5e9ceca54899a522db7b24a89d5e"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-01"
-time     = "21:31"
-title    = "LibWeb: Carry grid track sizes as payload references, drop FfiSizeValue"
-flake    = "15ecab5170f9afceba385483e154b8e9b0deb4fc"

@@ -1,7 +1,0 @@
-ladybird = "774561bf9c1589a54d36aa15460f1cd8e01f1a16"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-26"
-time     = "19:38"
-title    = "Meta: Install private Qt headers in the CI image"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

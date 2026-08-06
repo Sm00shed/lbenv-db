@@ -1,7 +1,0 @@
-ladybird = "75e464cea9476578a8423071159cde392d1e8ffd"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-24"
-time     = "21:29"
-title    = "Meta: Update libxml2 to 2.15.3"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

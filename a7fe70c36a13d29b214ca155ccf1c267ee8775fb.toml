@@ -1,7 +1,0 @@
-ladybird = "a7fe70c36a13d29b214ca155ccf1c267ee8775fb"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
-date     = "2026-08-02"
-time     = "16:25"
-title    = "LibWeb: Declare `HTMLImageElement.srcset` as a `USVString`"
-flake    = "1c87fb298ac380302a838e957dd82eb56addbd01"

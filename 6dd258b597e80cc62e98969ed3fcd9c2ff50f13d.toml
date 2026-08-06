@@ -1,7 +1,0 @@
-ladybird = "6dd258b597e80cc62e98969ed3fcd9c2ff50f13d"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "e9a235312fade27141fd93cb565e853c9e0578ca65522ffc7345047068b12d69"
-date     = "2026-07-29"
-time     = "11:18"
-title    = "Meta: Install qt6-positioning-dev in the Docker image"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"

@@ -1,7 +1,0 @@
-ladybird = "eea29e162ce4315bb8a6981846c6421b09630e4d"
-nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
-vcpkg    = "a6f34dffaa5e4a6dddb4cb1a98360cb54166cdb5b4ee571157ea0366d653d040"
-date     = "2026-07-17"
-time     = "08:58"
-title    = "LibWeb: Compare interned strings in Rust selector matching callbacks"
-flake    = "f91addb9cece1067d9585d6ac048c1b3689541e9"
