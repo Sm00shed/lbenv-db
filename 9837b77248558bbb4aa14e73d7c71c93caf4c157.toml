@@ -1,0 +1,9 @@
+ladybird = "9837b77248558bbb4aa14e73d7c71c93caf4c157"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
+baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
+date     = "2026-08-07"
+time     = "21:03"
+title    = "LibWeb: Place layout-pass root boxes at their entry points"
+# flake = pending
+lbenv    = "72d7bdfdb5a31190c4ffe5930651edf568757837"
