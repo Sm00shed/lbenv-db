@@ -1,0 +1,9 @@
+ladybird = "d54f76b406433b99232cca22154cd2f43bea28ab"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
+baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
+date     = "2026-08-07"
+time     = "19:38"
+title    = "LibWeb: Compute the used value of `transform-style`"
+# flake = pending
+lbenv    = "bfbe137d30941b71bbe1035d4c69283b5c672f75"
