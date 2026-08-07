@@ -1,0 +1,9 @@
+ladybird = "99659b259aeb1da74a93b2a30fc768d2ca880afa"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
+baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
+date     = "2026-08-07"
+time     = "13:12"
+title    = "LibWeb: Carry table cell intrinsic padding as a cell run input"
+# flake = pending
+lbenv    = "71f6cd0b04ce3e60f7514442beca737e44cc27b9"
