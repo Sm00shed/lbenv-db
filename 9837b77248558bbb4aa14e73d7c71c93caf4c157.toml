@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-07"
 time     = "21:03"
 title    = "LibWeb: Place layout-pass root boxes at their entry points"
-# flake = pending
+flake    = "d7773b7544ff0742c9cca130fa9c2cdf3e8aae70"
 lbenv    = "72d7bdfdb5a31190c4ffe5930651edf568757837"
