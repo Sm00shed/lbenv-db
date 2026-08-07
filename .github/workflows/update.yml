@@ -48,6 +48,17 @@ jobs:
             const REPO = { owner: 'LadybirdBrowser', repo: 'ladybird' };
             const MAX_PAGES = 100;
 
+            // Abort early if the hourly API budget is nearly exhausted.
+            // Leaves `latest` untouched so the next run resumes cleanly.
+            const rl = (await github.rest.rateLimit.get()).data.resources.core;
+            if (rl.remaining < 100) {
+              core.notice(
+                `API budget low (${rl.remaining} left, resets `
+                + `${new Date(rl.reset * 1000).toISOString()}) - skipping run.`,
+              );
+              return;
+            }
+
             const latestFile = 'latest';
             const lastSha = fs.existsSync(latestFile)
               ? fs.readFileSync(latestFile, 'utf8').trim()
@@ -81,7 +92,7 @@ jobs:
                   sha: c.sha,
                   date: c.commit.committer.date.slice(0, 10),
                   time: c.commit.committer.date.slice(11, 16),
-                  title: c.commit.message.split('\n')[0].slice(0, 100),
+                  title: c.commit.message.split('\n')[0].replace(/\r/g, ''),
                 });
                 if (!lastSha) break outer;
               }
@@ -102,11 +113,26 @@ jobs:
             }
 
             const overridesAt = async (ref) => {
-              const f = await github.rest.repos.getContent(
-                { ...REPO, path: 'vcpkg.json', ref },
-              );
-              const json = JSON.parse(Buffer.from(f.data.content, 'base64').toString());
+              let f;
+              try {
+                f = await github.rest.repos.getContent(
+                  { ...REPO, path: 'vcpkg.json', ref },
+                );
+              } catch (e) {
+                throw new Error(
+                  `Cannot read vcpkg.json at ${ref.slice(0, 8)}: `
+                  + `${e.status ?? '?'} ${e.message}`,
+                );
+              }
+              let json;
+              try {
+                json = JSON.parse(Buffer.from(f.data.content, 'base64').toString());
+              } catch (e) {
+                throw new Error(`Invalid vcpkg.json at ${ref.slice(0, 8)}: ${e.message}`);
+              }
               return {
+                // Remaining API budget, read from the response we already made
+                remaining: Number(f.headers['x-ratelimit-remaining'] ?? NaN),
                 baseline: json['builtin-baseline'] ?? '',
                 overrides: Object.fromEntries((json.overrides ?? []).map(p => [p.name, p.version])),
               };
@@ -128,6 +154,9 @@ jobs:
             let lastGoodSha = lastSha;
             let written = 0;
 
+            let aborted = null;
+
+            try {
             for (const c of fresh) {
               const v = await overridesAt(c.sha);
               const currentHash = hashOverrides(v.overrides);
@@ -177,8 +206,8 @@ jobs:
                 `baseline = "${v.baseline}"`,
                 `date     = "${c.date}"`,
                 `time     = "${c.time}"`,
-                `title    = "${c.title.replace(/"/g, '\\"')}"`,
-                `# flake filled in commit 2`,
+                `title    = "${c.title.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`,
+                `# flake = pending`,
                 `lbenv    = "${lbenv}"`,
               ].join('\n') + '\n';
 
@@ -187,6 +216,19 @@ jobs:
               prevV = v;
               prevHash = currentHash;
               written++;
+
+              // Stop while budget remains for the steps after this loop.
+              // Progress is kept; the next scheduled run continues from `latest`.
+              if (Number.isFinite(v.remaining) && v.remaining < 50) {
+                core.notice(
+                  `API budget low (${v.remaining} left) - stopping after `
+                  + `${written} commits, resuming next run.`,
+                );
+                break;
+              }
+            }
+            } catch (e) {
+              aborted = e;
             }
 
             if (written > 0) {
@@ -194,8 +236,20 @@ jobs:
               core.info(`Added ${written} commits`);
             }
 
+            if (aborted) {
+              // Fail the job even when TOMLs were written - the push step runs
+              // regardless (see its `if:`), so progress is not lost.
+              core.setFailed(
+                written > 0
+                  ? `Stopped after ${written} commits: ${aborted.message}`
+                  : aborted.message,
+              );
+            }
+
       - name: Commit and push
-        if: steps.drift-check.outputs.blocked == 'false'
+        # Runs even if "Update DB" failed, so partial progress is committed.
+        # Skipped on cancellation and when a drift issue blocks the run.
+        if: ${{ !cancelled() && steps.drift-check.outputs.blocked == 'false' }}
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
@@ -213,18 +267,18 @@ jobs:
           git push
           FLAKE_REV=$(git rev-parse HEAD)
 
-          # Commit 2: backfill flake rev into new TOML files
+          # Second commit: replace the pending placeholder with the real flake rev
           for f in *.toml; do
-            if grep -q '^# flake filled in commit 2' "$f"; then
-              sed -i "s|^# flake filled in commit 2|flake    = \"$FLAKE_REV\"|" "$f"
+            if grep -q '^# flake = pending$' "$f"; then
+              sed -i "s|^# flake = pending$|flake    = \"$FLAKE_REV\"|" "$f"
             fi
           done
 
           git add *.toml
           if git diff --cached --quiet; then
-            echo "No flake backfill needed"
+            echo "No pending flake rev"
             exit 0
           fi
-          git commit -m "db: backfill flake rev ${FLAKE_REV:0:8}"
+          git commit -m "db: set flake rev ${FLAKE_REV:0:8}"
           git pull --rebase --autostash
           git push
