@@ -1,0 +1,9 @@
+ladybird = "62ca66879a86a64c7e46eb23eb5261569291bb8b"
+nixpkgs  = "8f0500b9660505dc3cb647775fe9a978a74b5283"
+vcpkg    = "1bfb778f0e1e4b0293d4e78c61325dafd35a6c4b989b5e5ce1819ddf0afb4d5a"
+baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
+date     = "2026-08-08"
+time     = "08:50"
+title    = "LibWebView: Support pausing and resuming file downloads"
+# flake = pending
+lbenv    = "76079d2691140bbb8af9074cf262a7fdb8b8e990"
