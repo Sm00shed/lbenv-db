@@ -5,5 +5,5 @@ baseline = "40f3c709db80acf154ac4b17a1f83c564ebd022e"
 date     = "2026-08-08"
 time     = "08:50"
 title    = "LibWebView: Persist in-progress downloads across browser restarts"
-# flake = pending
+flake    = "62ae35aab02ca2dd49562e0849de8f0b2cca49f5"
 lbenv    = "76079d2691140bbb8af9074cf262a7fdb8b8e990"
